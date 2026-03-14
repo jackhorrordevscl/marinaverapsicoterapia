@@ -34,7 +34,39 @@ function App() {
             content="Acompañamiento profesional basado en evidencia para tu bienestar integral"
           />
           <meta property="og:type" content="website" />
-          <link rel="canonical" href="https://marinaverapsicologia.cl" />
+          <link
+            rel="canonical"
+            href="https://marinaverapsicoterapia.vercel.app/"
+          />
+          <script type="application/ld+json">
+            {JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              "@id": "https://marinaverapsicoterapia.vercel.app/",
+              name: "Marina Vera Guzmán",
+              image: "https://tu-dominio.com/og-image.jpg",
+              description:
+                "Psicóloga Clínica especializada en terapia sistémica",
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "Santiago",
+                addressRegion: "Metropolitana",
+                addressCountry: "CL",
+              },
+              telephone: "+56937062554",
+              email: "lic.ps.marinaverag@gmail.com",
+              priceRange: "$$",
+              areaServed: ["CL"],
+              serviceType: ["Psicoterapia", "Evaluación Psicodiagnóstica"],
+              knowsLanguage: "es",
+              sameAs: [
+                "https://www.instagram.com/psico_marinade_colores",
+                "https://www.tiktok.com/@marinna_decolores",
+                "https://www.youtube.com/@Psico_marinadecolores",
+                "https://www.facebook.com/people/Marinna-de-Colores/61582718874848/?rdid=QcPIbYoyISqzSYDX&share_url=https%253A%252F%252Fwww.facebook.com%252Fshare%252F17zMTNjsaz%252F",
+              ],
+            })}
+          </script>
         </Helmet>
 
         <Header />
