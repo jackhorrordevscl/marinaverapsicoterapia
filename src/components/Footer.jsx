@@ -135,11 +135,7 @@ const Footer = () => {
                   href={`https://wa.me/${import.meta.env.VITE_WHATSAPP_NUMBER}`}
                   className="text-gray-400 hover:text-accent-400 transition-colors text-sm"
                 >
-                  +
-                  {import.meta.env.VITE_WHATSAPP_NUMBER?.replace(
-                    /(\d{2})(\d{1})(\d{4})(\d{4})/,
-                    "$1 $2 $3 $4",
-                  )}
+                  +{import.meta.env.VITE_WHATSAPP_NUMBER || "56 9 1234 5678"}
                   <br />
                   <span className="text-xs">(WhatsApp disponible)</span>
                 </a>
