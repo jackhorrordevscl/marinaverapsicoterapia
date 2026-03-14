@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Award, BookOpen, Shield, Heart } from "lucide-react";
+import marinaAbout from '../assets/images/about.png';
 
 const About = () => {
   const values = [
@@ -41,20 +42,12 @@ const About = () => {
         >
           <div className="relative">
             {/* Placeholder para segunda foto o imagen profesional */}
-            <div className="aspect-[4/5] bg-gradient-to-br from-accent-100 via-primary-100 to-accent-50 rounded-2xl shadow-2xl overflow-hidden">
-              <div className="w-full h-full flex items-center justify-center p-8">
-                <div className="text-center">
-                  <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-accent-300 to-accent-400 flex items-center justify-center">
-                    <span className="text-6xl">📚</span>
-                  </div>
-                  <p className="text-gray-600 font-medium text-lg">
-                    Foto profesional
-                  </p>
-                  <p className="text-sm text-gray-500 mt-2">
-                    (Espacio para imagen de consultorio/bitácora)
-                  </p>
-                </div>
-              </div>
+            <div className="aspect-[4/5] bg-gradient-to-br from-accent-100 via-white to-accent-50 rounded-2xl shadow-2xl overflow-hidden border-4 border-white">
+              <img
+                src={marinaAbout}
+                alt="Marina Vera - Consultorio"
+                className="w-full h-full object-cover"
+              />
             </div>
 
             {/* Decoración */}
