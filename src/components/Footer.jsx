@@ -8,13 +8,25 @@ const Footer = () => {
     {
       name: "Instagram",
       icon: Instagram,
-      url: "https://instagram.com/marinaverapsicologia",
+      url: "https://www.instagram.com/psico_marinade_colores",
       color: "hover:text-pink-500",
     },
     {
       name: "TikTok",
       icon: Music2,
-      url: "https://tiktok.com/@marinaverapsicologia",
+      url: "https://www.tiktok.com/@marinna_decolores",
+      color: "hover:text-black",
+    },
+    {
+      name: "Youtube",
+      icon: Youtube,
+      url: "https://www.youtube.com/@Psico_marinadecolores",
+      color: "hover:text-black",
+    },
+    {
+      name: "Facebook",
+      icon: Facebook,
+      url: "https://www.facebook.com/people/Marinna-de-Colores/61582718874848/?rdid=QcPIbYoyISqzSYDX&share_url=https%253A%252F%252Fwww.facebook.com%252Fshare%252F17zMTNjsaz%252F",
       color: "hover:text-black",
     },
   ];
@@ -104,10 +116,10 @@ const Footer = () => {
               <li className="flex items-start gap-2">
                 <Phone className="w-5 h-5 text-accent-400 flex-shrink-0 mt-0.5" />
                 <a
-                  href="https://wa.me/56912345678"
+                  href="https://wa.me/56937062554"
                   className="text-gray-400 hover:text-accent-400 transition-colors text-sm"
                 >
-                  +56 9 1234 5678
+                  +56 9 3706 2554
                   <br />
                   <span className="text-xs">(WhatsApp disponible)</span>
                 </a>
@@ -115,10 +127,10 @@ const Footer = () => {
               <li className="flex items-start gap-2">
                 <Mail className="w-5 h-5 text-accent-400 flex-shrink-0 mt-0.5" />
                 <a
-                  href="mailto:contacto@marinavera.cl"
+                  href="mailto:lic.ps.marinaverag@gmail.com"
                   className="text-gray-400 hover:text-accent-400 transition-colors text-sm"
                 >
-                  contacto@marinavera.cl
+                  lic.ps.marinaverag@gmail.com
                 </a>
               </li>
             </ul>

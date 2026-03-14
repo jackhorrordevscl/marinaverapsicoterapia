@@ -154,7 +154,7 @@ const Contact = () => {
             ¿Prefieres una respuesta más rápida?
           </p>
           <a
-            href="https://wa.me/56912345678?text=Hola,%20quisiera%20información%20sobre%20los%20servicios"
+            href="https://wa.me/56937062554?text=Hola,%20quisiera%20información%20sobre%20los%20servicios"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 bg-[#25D366] hover:bg-[#20BA5A] text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300 hover:scale-105 shadow-lg"
