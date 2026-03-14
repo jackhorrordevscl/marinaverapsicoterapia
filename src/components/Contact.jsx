@@ -6,21 +6,27 @@ const Contact = () => {
     {
       title: "Agendar Sesión",
       description: "Reserva tu hora de atención online o presencial",
-      url: "https://docs.google.com/forms/d/1k4wEk5umYGPSpBzkm7CFkbZJFjzBmt1oFc6xmJ-zKYc/viewform",
+      url:
+        import.meta.env.VITE_FORM_AGENDAR ||
+        "https://docs.google.com/forms/d/1k4wEk5umYGPSpBzkm7CFkbZJFjzBmt1oFc6xmJ-zKYc/viewform",
       icon: Calendar,
       color: "from-blue-500 to-blue-600",
     },
     {
       title: "Consulta General",
       description: "Envía tus dudas o consultas sobre los servicios",
-      url: "https://docs.google.com/forms/d/1qiyvipQrjFyWfzfhGQfyH44FDxd6Dc5q9T5GqYmInTM/viewform",
+      url:
+        import.meta.env.VITE_FORM_CONSULTA ||
+        "https://docs.google.com/forms/d/1qiyvipQrjFyWfzfhGQfyH44FDxd6Dc5q9T5GqYmInTM/viewform",
       icon: MessageSquare,
       color: "from-green-500 to-green-600",
     },
     {
       title: "Otro Formulario",
       description: "Formulario adicional para casos específicos",
-      url: "https://docs.google.com/forms/d/1P4lZnW4vXlnVo6KA6bGpQvxlkgQs5XES8FrQwo0Yu2k/viewform",
+      url:
+        import.meta.env.VITE_FORM_OTRO ||
+        "https://docs.google.com/forms/d/1P4lZnW4vXlnVo6KA6bGpQvxlkgQs5XES8FrQwo0Yu2k/viewform",
       icon: Mail,
       color: "from-purple-500 to-purple-600",
     },
@@ -154,7 +160,7 @@ const Contact = () => {
             ¿Prefieres una respuesta más rápida?
           </p>
           <a
-            href="https://wa.me/56937062554?text=Hola,%20quisiera%20información%20sobre%20los%20servicios"
+            href={`https://wa.me/${import.meta.env.VITE_WHATSAPP_NUMBER}?text=Hola,%20quisiera%20información%20sobre%20los%20servicios`}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 bg-[#25D366] hover:bg-[#20BA5A] text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300 hover:scale-105 shadow-lg"

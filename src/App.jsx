@@ -34,38 +34,49 @@ function App() {
             content="Acompañamiento profesional basado en evidencia para tu bienestar integral"
           />
           <meta property="og:type" content="website" />
-          <link
-            rel="canonical"
-            href="https://marinaverapsicoterapia.vercel.app/"
+          <link rel="canonical" href={import.meta.env.VITE_SITE_URL} />
+          <meta
+            property="og:image"
+            content={`${import.meta.env.VITE_SITE_URL}/og-image.jpg`}
+          />
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="630" />
+          <meta property="og:locale" content="es_CL" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta
+            name="twitter:image"
+            content={`${import.meta.env.VITE_SITE_URL}/og-image.jpg`}
           />
           <script type="application/ld+json">
-            {JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "LocalBusiness",
-              "@id": "https://marinaverapsicoterapia.vercel.app/",
-              name: "Marina Vera Guzmán",
-              image: "https://tu-dominio.com/og-image.jpg",
-              description:
-                "Psicóloga Clínica especializada en terapia sistémica",
-              address: {
-                "@type": "PostalAddress",
-                addressLocality: "Santiago",
-                addressRegion: "Metropolitana",
-                addressCountry: "CL",
-              },
-              telephone: "+56937062554",
-              email: "lic.ps.marinaverag@gmail.com",
-              priceRange: "$$",
-              areaServed: ["CL"],
-              serviceType: ["Psicoterapia", "Evaluación Psicodiagnóstica"],
-              knowsLanguage: "es",
-              sameAs: [
-                "https://www.instagram.com/psico_marinade_colores",
-                "https://www.tiktok.com/@marinna_decolores",
-                "https://www.youtube.com/@Psico_marinadecolores",
-                "https://www.facebook.com/people/Marinna-de-Colores/61582718874848/?rdid=QcPIbYoyISqzSYDX&share_url=https%253A%252F%252Fwww.facebook.com%252Fshare%252F17zMTNjsaz%252F",
-              ],
-            })}
+            {`
+              {
+                "@context": "https://schema.org",
+                "@type": "ProfessionalService",
+                "name": "Marina Vera Guzmán - Psicóloga Clínica",
+                "image": "${import.meta.env.VITE_SITE_URL}/og-image.jpg",
+                "description": "Psicóloga Clínica especializada en enfoque sistémico-funcional y transgeneracional. Atención adultos, evaluación psicodiagnóstica, informes tribunales de familia.",
+                "address": {
+                  "@type": "PostalAddress",
+                  "addressLocality": "Santiago",
+                  "addressCountry": "CL"
+                },
+                "url": "${import.meta.env.VITE_SITE_URL}",
+                "telephone": "+${import.meta.env.VITE_WHATSAPP_NUMBER}",
+                "priceRange": "$$",
+                "openingHoursSpecification": [
+                  {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                    "opens": "09:00",
+                    "closes": "18:00"
+                  }
+                ],
+                "areaServed": {
+                  "@type": "Place",
+                  "name": "Santiago, Chile"
+                }
+              }
+            `}
           </script>
         </Helmet>
 
@@ -82,7 +93,7 @@ function App() {
 
         {/* WhatsApp Floating Button */}
         <a
-          href="https://wa.me/56912345678?text=Hola,%20quisiera%20información%20sobre%20los%20servicios"
+          href={`https://wa.me/${import.meta.env.VITE_WHATSAPP_NUMBER}?text=Hola,%20quisiera%20información%20sobre%20los%20servicios`}
           target="_blank"
           rel="noopener noreferrer"
           className="fixed bottom-6 right-6 w-14 h-14 bg-[#25D366] hover:bg-[#20BA5A] text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 z-40 group"

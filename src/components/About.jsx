@@ -45,7 +45,7 @@ const About = () => {
             <div className="aspect-[4/5] bg-gradient-to-br from-accent-100 via-white to-accent-50 rounded-2xl shadow-2xl overflow-hidden border-4 border-white">
               <img
                 src={marinaAbout}
-                alt="Marina Vera - Consultorio"
+                alt="Marina Vera - Espacio de consulta terapéutica con enfoque cálido y profesional"
                 className="w-full h-full object-cover"
               />
             </div>

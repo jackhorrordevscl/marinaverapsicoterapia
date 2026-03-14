@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import logo from '../assets/images/logo.png'
+import logo from '../assets/images/logo.png';
+import { scrollToSection } from '../utils/scrollUtils'
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -23,13 +24,10 @@ const Header = () => {
     { name: "Contacto", href: "#contacto" },
   ];
 
-  const scrollToSection = (e, href) => {
+  const handleScrollToSection = (e, href) => {
     e.preventDefault();
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      setIsMobileMenuOpen(false);
-    }
+    scrollToSection(href);
+    setIsMobileMenuOpen(false);
   };
 
   return (
@@ -44,7 +42,7 @@ const Header = () => {
         <div className="flex justify-between items-center h-20">
           <motion.a
             href="#inicio"
-            onClick={(e) => scrollToSection(e, "#inicio")}
+            onClick={(e) => handleScrollToSection(e, "#inicio")}
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             className="flex items-center gap-3"
@@ -60,7 +58,7 @@ const Header = () => {
               <motion.a
                 key={item.name}
                 href={item.href}
-                onClick={(e) => scrollToSection(e, item.href)}
+                onClick={(e) => handleScrollToSection(e, item.href)}
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
@@ -72,7 +70,7 @@ const Header = () => {
             ))}
             <motion.a
               href="#contacto"
-              onClick={(e) => scrollToSection(e, "#contacto")}
+              onClick={(e) => handleScrollToSection(e, "#contacto")}
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.5 }}
@@ -110,7 +108,7 @@ const Header = () => {
                     <a
                       key={item.name}
                       href={item.href}
-                      onClick={(e) => scrollToSection(e, item.href)}
+                      onClick={(e) => handleScrollToSection(e, item.href)}
                       className="block px-4 py-2 text-gray-700 hover:bg-accent-50 hover:text-accent-600 rounded-lg transition-colors"
                     >
                       {item.name}
@@ -119,7 +117,7 @@ const Header = () => {
                 })}
                 <a
                   href="#contacto"
-                  onClick={(e) => scrollToSection(e, "#contacto")}
+                  onClick={(e) => handleScrollToSection(e, "#contacto")}
                   className="block mx-4 text-center btn-primary"
                 >
                   Agendar Sesión

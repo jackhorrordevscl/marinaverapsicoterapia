@@ -1,15 +1,11 @@
 import { motion } from "framer-motion";
 import { Calendar, MessageSquare } from "lucide-react";
 import marinaHero from '../assets/images/foto1.jpeg'
+import { scrollToSection } from "../utils/scrollUtils";
+
 
 const Hero = () => {
-    const scrollToSection = (href) => {
-        const element = document.querySelector(href);
-        if (element) {
-            element.scrollIntoView({ behavior: "smooth"});
-        }
-    };
-
+    
     return (
       <section
         id="inicio"
@@ -120,7 +116,7 @@ const Hero = () => {
                 <div className="w-full h-full bg-gradient-to-br from-accent-100 via-white to-accent-50 rounded-3xl shadow-2xl overflow-hidden border-4 border-white">
                   <img
                     src={marinaHero}
-                    alt="Marina Vera Guzmán - Psicóloga Clínica"
+                    alt="Marina Vera Guzmán - Psicóloga Clínica especializada en terapia sistémica y transgeneracional"
                     className="w-full h-full object-cover"
                   />
                 </div>
