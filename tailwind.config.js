@@ -1,29 +1,39 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
+        primary: {
+          50: "#f5f1e8",
+          100: "#e8dcc4",
+          200: "#d4c3a0",
+          300: "#c0aa7c",
+          400: "#ac9158",
+          500: "#987834",
+          600: "#7a602a",
+          700: "#5c4820",
+          800: "#3e3015",
+          900: "#20180b",
+        },
         accent: {
-          50: '#fef2f2',
-          100: '#fee2e2',
-          200: '#fecaca',
-          500: '#ef4444',
-          600: '#dc2626',
-          700: '#b91c1c',
+          50: "#e6f4f1",
+          100: "#b3dfd4",
+          200: "#80cab7",
+          300: "#4db59a",
+          400: "#1aa07d",
+          500: "#158b63",
+          600: "#116c4d",
+          700: "#0d4d37",
+          800: "#092e21",
+          900: "#050f0b",
         },
       },
       fontFamily: {
-        serif: ['Playfair Display', 'serif'],
-        sans: ['Inter', 'sans-serif'],
-      },
-      animation: {
-        pulse: 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        sans: ["Inter", "sans-serif"],
+        serif: ["Merriweather", "serif"],
       },
     },
   },
   plugins: [],
-}
+};
