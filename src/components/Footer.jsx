@@ -208,7 +208,7 @@ const Footer = () => {
             </p>
             <p className="text-xs">
               Diseño y desarrollo:{" "}
-              <span className="text-accent-400">Tu nombre aquí</span>
+              <span className="text-accent-400">GroundZero Development</span>
             </p>
           </div>
         </div>
