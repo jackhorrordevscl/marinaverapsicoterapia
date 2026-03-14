@@ -1,0 +1,89 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&display=swap');
+
+@theme {
+  --color-primary-50: #f5f1e8;
+  --color-primary-100: #e8dcc4;
+  --color-primary-200: #d4c3a0;
+  --color-primary-300: #c0aa7c;
+  --color-primary-400: #ac9158;
+  --color-primary-500: #987834;
+  --color-primary-600: #7a602a;
+  --color-primary-700: #5c4820;
+  --color-primary-800: #3e3015;
+  --color-primary-900: #20180b;
+  
+  --color-accent-50: #e6f4f1;
+  --color-accent-100: #b3dfd4;
+  --color-accent-200: #80cab7;
+  --color-accent-300: #4db59a;
+  --color-accent-400: #1aa07d;
+  --color-accent-500: #158b63;
+  --color-accent-600: #116c4d;
+  --color-accent-700: #0d4d37;
+  --color-accent-800: #092e21;
+  --color-accent-900: #050f0b;
+  
+  --font-family-sans: 'Inter', sans-serif;
+  --font-family-serif: 'Merriweather', serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-primary-50);
+    color: rgb(31 41 55);
+    font-family: var(--font-family-sans);
+  }
+}
+
+@layer components {
+  .btn-primary {
+    background-color: var(--color-accent-500);
+    color: white;
+    font-weight: 500;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--color-accent-600);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  }
+  
+  .btn-secondary {
+    background-color: white;
+    color: var(--color-accent-600);
+    font-weight: 500;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    border: 2px solid var(--color-accent-500);
+    transition: all 0.3s;
+  }
+  
+  .btn-secondary:hover {
+    background-color: var(--color-primary-100);
+  }
+
+  .section-container {
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 4rem 1rem;
+  }
+  
+  @media (min-width: 640px) {
+    .section-container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .section-container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+}
