@@ -97,8 +97,8 @@ const Specialties = () => {
             <motion.div
               key={index}
               variants={itemVariants}
-              whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
-              className={`${specialty.color} rounded-2xl p-6 border-2 backdrop-blur-sm bg-opacity-80 hover:bg-opacity-100 transition-all duration-300 cursor-default shadow-md hover:shadow-xl`}
+              whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
+              className={`${specialty.color} rounded-xl p-7 border-2 backdrop-blur-sm bg-opacity-90 hover:bg-opacity-100 transition-all duration-300 cursor-default shadow-sm hover:shadow-lg`}
             >
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0">

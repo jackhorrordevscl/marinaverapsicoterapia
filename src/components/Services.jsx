@@ -109,8 +109,8 @@ const Services = () => {
             <motion.div
               key={index}
               variants={itemVariants}
-              whileHover={{ y: -8, transition: { duration: 0.3 } }}
-              className="group relative bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 overflow-hidden"
+              whileHover={{ y: -4, transition: { duration: 0.3 } }}
+              className="group relative bg-white rounded-xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-accent-100 overflow-hidden"
             >
               {/* Gradient background on hover */}
               <div
@@ -120,7 +120,7 @@ const Services = () => {
               <div className="relative z-10">
                 {/* Icon */}
                 <div
-                  className={`w-14 h-14 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
+                  className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-5 group-hover:scale-105 transition-transform duration-300 shadow-md`}
                 >
                   <Icon className="w-7 h-7 text-white" />
                 </div>

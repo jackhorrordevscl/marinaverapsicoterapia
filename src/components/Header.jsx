@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import logo from '../assets/images/logo.png'
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -34,7 +35,9 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white/95 backdrop-blur-sm shadow-md" : "bg-transparent"
+        isScrolled
+          ? "bg-white/98 backdrop-blur-md shadow-lg border-b border-accent-100"
+          : "bg-transparent"
       }`}
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -44,9 +47,12 @@ const Header = () => {
             onClick={(e) => scrollToSection(e, "#inicio")}
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="text-2xl font-serif font-bold bg-gradient-to-r from-accent-600 to-accent-500 bg-clip-text text-transparent"
+            className="flex items-center gap-3"
           >
-            Marina Vera Guzmán
+            <img src={logo} alt="Marina Vera Guzmán" className="h-12 w-auto" />
+            <span className="text-xl font-serif font-semibold gradient-text hidden sm:block">
+              Marina Vera Guzmán
+            </span>
           </motion.a>
 
           <div className="hidden md:flex items-center space-x-8">

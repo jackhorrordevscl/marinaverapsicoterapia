@@ -78,7 +78,7 @@ const Contact = () => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ y: -8, transition: { duration: 0.3 } }}
-              className="group relative bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-gray-100 hover:border-accent-300 overflow-hidden"
+              className="group relative bg-white rounded-xl p-7 shadow-sm hover:shadow-xl transition-all duration-300 border-2 border-accent-100 hover:border-accent-400 overflow-hidden"
             >
               {/* Gradient background on hover */}
               <div

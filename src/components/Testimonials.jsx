@@ -61,7 +61,7 @@ const Testimonials = () => {
       <div className="max-w-4xl mx-auto">
         <div className="relative">
           {/* Carousel Container */}
-          <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12 min-h-[400px] flex flex-col justify-between">
+          <div className="bg-white rounded-2xl shadow-xl p-10 md:p-14 min-h-[420px] flex flex-col justify-between border border-accent-50">
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentIndex}
