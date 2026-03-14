@@ -18,7 +18,7 @@ const Footer = () => {
       name: "Instagram",
       url:
         import.meta.env.VITE_INSTAGRAM_URL ||
-        "https://instagram.com/marinaverapsicologia",
+        "https://www.instagram.com/psico_marinade_colores",
       color: "hover:text-pink-500",
       svg: (
         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -30,7 +30,7 @@ const Footer = () => {
       name: "TikTok",
       url:
         import.meta.env.VITE_TIKTOK_URL ||
-        "https://tiktok.com/@marinaverapsicologia",
+        "https://www.tiktok.com/@marinna_decolores",
       color: "hover:text-black",
       svg: (
         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
